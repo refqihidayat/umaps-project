@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded',  () => {
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
   const toggleBtn = document.getElementById('sidebar-toggle');
+  const toggleBtn = document.getElementById('search-container');
 
   sidebar.classList.toggle('hidden');
 
