@@ -99,13 +99,6 @@ body, html {
   transition: all 0.3s ease;
 }
 
-/* ========== ZOOM BUTTON ========== */
-.leaflet-top.leaflet-left {
-  top: 10px;
-  left: auto;
-  right: 10px;
-}
-
 /* ========== BUILDING LIST ========== */
 #building-list {
   margin-top: 20px;
@@ -119,6 +112,13 @@ body, html {
   margin-bottom: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+}
+
+/* ========== ZOOM BUTTON ========== */
+.leaflet-top.leaflet-left {
+  top: 10px;
+  left: auto;
+  right: 10px;
 }
 
 .building-item:hover {
