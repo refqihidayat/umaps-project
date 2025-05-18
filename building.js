@@ -67,6 +67,10 @@ var buildings = {
     coords: [-7.961929807972241, 112.61913255888099],
     info: "<b>Poliklinik UM</b><br>No Data"
   },
+  "A17": {
+    coords: [-7.961679184991351, 112.61895466718165],
+    info: "<b>Green House FMIPA</b><br>No Data"
+  },
   "STADION": {
     coords: [-7.958, 112.618],
     info: "<b>Stadion</b>"
