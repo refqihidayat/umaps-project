@@ -51,7 +51,7 @@ function populateBuildingList() {
 }
 
 // Jalankan saat halaman dimuat
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded',  () => {
   populateBuildingList();
 });
 
@@ -69,12 +69,10 @@ function toggleSidebar() {
 
   // Geser posisi search box
   if (sidebar.classList.contains('hidden')) {
-    toggleBtn.style.left = '60px';
-    searchContainer.style.left = '120px';
+    toggleBtn.style.left = '10px';
     toggleBtn.innerHTML = '❯';
   } else {
-    toggleBtn.style.left = '320px';
-    searchContainer.style.left = '360px';
+    toggleBtn.style.left = '310px';
     toggleBtn.innerHTML = '❮';
   }
 }
