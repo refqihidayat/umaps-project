@@ -1,99 +1,106 @@
-/* style.css */
-
-body {
+body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  height: 100%;
+  font-family: sans-serif;
 }
 
 #map {
-  height: 100vh;
-  width: 100%;
-  z-index: 0;
-}
-
-.navbar {
-  z-index: 1001;
-}
-
-/* Search Box */
-#search-container {
-  position: absolute;
-  top: 80px;
-  left: 320px; /* posisi awal saat sidebar terbuka */
-  z-index: 1000;
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  width: 300px;
-  transition: left 0.3s ease;
-}
-
-/* Ketika sidebar disembunyikan */
-#sidebar.hidden ~ #search-container {
-  left: 20px;
-}
-
-.sidebar {
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
-  height: 100vh;
-  background: white;
-  z-index: 1000;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  overflow-y: auto;
-  padding-top: 70px;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
-.building-item {
-  padding: 8px 15px;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
+/* Navbar (warna paling gelap dari palette) */
+#navbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #0b1f3a;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  color: white;
 }
-
-.building-item:hover {
-  background-color: #f5f5f5;
-}
-
 
 /* Sidebar */
 #sidebar {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 300px;
-  height: 100vh;
-  background: white;
-  z-index: 1000;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  left: 60px;
+  width: 260px;
+  height: 100%;
+  background-color: #3393c1;
+  z-index: 998;
   overflow-y: auto;
-  transition: left 0.3s ease;
+  transition: transform 0.3s ease;
+  padding: 15px;
 }
-
-/* Ketika disembunyikan */
 #sidebar.hidden {
-  left: -300px;
+  transform: translateX(-260px);
 }
 
 /* Toggle Button */
 #sidebar-toggle {
   position: absolute;
   top: 50%;
-  left: 300px; /* Nempel di sisi kanan sidebar */
+  left: 320px;
   transform: translateY(-50%);
-  background-color: #007bff;
-  color: white;
-  width: 30px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  cursor: pointer;
+  background-color: #f55;
+  color: black;
+  padding: 6px;
   border-radius: 0 5px 5px 0;
-  font-weight: bold;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
-  z-index: 1100;
-  transition: left 0.3s ease;
+  cursor: pointer;
+  z-index: 999;
+}
+#sidebar.hidden + #sidebar-toggle {
+  left: 60px;
+}
+
+/* Search Box */
+#search-container {
+  position: absolute;
+  top: 20px;
+  left: 360px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  gap: 6px;
+}
+#search-container input {
+  padding: 6px;
+  flex: 1;
+}
+#search-container button {
+  padding: 6px 12px;
+}
+
+/* Logo */
+#logo {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.nav-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 20px;
+  font-size: 12px;
 }
