@@ -12,7 +12,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var tempMarker = null;
 
 // Load data GeoJSON garis jalan
-fetch('map.geojson')
+fetch('jalan.geojson')
   .then(response => response.json())
   .then(data => {
     L.geoJSON(data, {
