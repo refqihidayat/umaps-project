@@ -1,0 +1,104 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+.navbar {
+  z-index: 1001;
+}
+
+/* Search Box */
+#search-container {
+  position: absolute;
+  top: 80px;
+  left: 320px; /* posisi awal saat sidebar terbuka */
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 300px;
+  transition: left 0.3s ease;
+}
+
+/* Ketika sidebar disembunyikan */
+#sidebar.hidden ~ #search-container {
+  left: 20px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  padding-top: 70px;
+}
+
+.building-item {
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.building-item:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* Sidebar */
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+
+/* Ketika disembunyikan */
+#sidebar.hidden {
+  left: -300px;
+}
+
+/* Toggle Button */
+#sidebar-toggle {
+  position: absolute;
+  top: 50%;
+  left: 300px; /* Nempel di sisi kanan sidebar */
+  transform: translateY(-50%);
+  background-color: #007bff;
+  color: white;
+  width: 30px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  z-index: 1100;
+  transition: left 0.3s ease;
+}
+
+/* Posisi tombol saat sidebar disembunyikan */
+#sidebar.hidden + #sidebar-toggle {
+  left: 0;
+}
