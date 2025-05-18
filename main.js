@@ -69,7 +69,7 @@ function toggleSidebar() {
 
   // Geser posisi search box
   if (sidebar.classList.contains('hidden')) {
-    toggleBtn.style.left = '10px';
+    toggleBtn.style.left = '60px';
     toggleBtn.innerHTML = '❯';
   } else {
     toggleBtn.style.left = '310px';
