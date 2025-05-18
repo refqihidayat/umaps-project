@@ -98,10 +98,12 @@ body, html {
   width: 300px;
   transition: all 0.3s ease;
 }
+
+/* ========== ZOOM BUTTON ========== */
 .leaflet-top.leaflet-left {
-  top: 20px;
-  left: 65px; /* Setelah navbar (60px) + margin */
-  z-index: 500;
+  top: 10px;
+  left: auto;
+  right: 10px;
 }
 
 /* ========== BUILDING LIST ========== */
