@@ -59,20 +59,14 @@ document.addEventListener('DOMContentLoaded',  () => {
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
   const toggleBtn = document.getElementById('sidebar-toggle');
-  const searchBox = document.getElementById('search-container');
 
   sidebar.classList.toggle('hidden');
 
-  // Ubah arah panah
-  const isHidden = sidebar.classList.contains('hidden');
-  toggleBtn.innerHTML = isHidden ? '❯' : '❮';
-
-  // Geser posisi search box
   if (sidebar.classList.contains('hidden')) {
-    toggleBtn.style.left = '60px';
+    toggleBtn.style.left = '60px'; // Ujung navbar
     toggleBtn.innerHTML = '❯';
   } else {
-    toggleBtn.style.left = '310px';
+    toggleBtn.style.left = '310px'; // 60 (navbar) + 250 (sidebar)
     toggleBtn.innerHTML = '❮';
   }
 }
