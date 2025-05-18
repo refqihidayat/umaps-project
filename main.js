@@ -68,10 +68,14 @@ function toggleSidebar() {
   toggleBtn.innerHTML = isHidden ? '❯' : '❮';
 
   // Geser posisi search box
-  if (isHidden) {
-    searchBox.style.left = '20px'; // saat sidebar tertutup
+  if (sidebar.classList.contains('hidden')) {
+    toggleBtn.style.left = '60px';
+    searchContainer.style.left = '120px';
+    toggleBtn.innerHTML = '❯';
   } else {
-    searchBox.style.left = '320px'; // saat sidebar terbuka
+    toggleBtn.style.left = '320px';
+    searchContainer.style.left = '360px';
+    toggleBtn.innerHTML = '❮';
   }
 }
 
