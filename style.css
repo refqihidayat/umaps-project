@@ -23,17 +23,27 @@ body, html {
   left: 0;
   width: 60px;
   height: 100%;
-  background-color: #0D1B2A; /* warna biru tua pertama dari pattern */
+  background-color: #0D1B2A; /* Biru tua dari palet kamu */
+  z-index: 1100;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  z-index: 1001;
+  align-items: center;
+  padding-top: 10px;
 }
 
-#navbar img {
+.logo {
   width: 40px;
+  height: 40px;
+  border-radius: 50%;
   margin-bottom: 10px;
+}
+
+.brand-text {
+  color: white;
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
 }
 
 /* ========== SIDEBAR ========== */
@@ -86,6 +96,11 @@ body, html {
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
   width: 300px;
   transition: all 0.3s ease;
+}
+.leaflet-top.leaflet-left {
+  top: 20px;
+  left: 65px; /* Setelah navbar (60px) + margin */
+  z-index: 500;
 }
 
 /* ========== BUILDING LIST ========== */
