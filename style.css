@@ -65,6 +65,10 @@ body, html {
   left: -250px;
 }
 
+.brand-text {
+  color: white;
+}
+
 /* ========== TOGGLE BUTTON ========== */
 #sidebar-toggle {
   position: absolute;
